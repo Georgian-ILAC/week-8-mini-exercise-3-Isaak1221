@@ -1,35 +1,51 @@
 public class Person {
-    private  String firstName;
-    private  String lastName;
-    private double height;
+    private String firstName;
+    private String lastName;
+    private int heightFeet;
+    private int heightInches;
 
-    public Person(String firstName, String lastName) {
+    public Person(String firstName, String lastName, int heightFeet, int heightInches) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.heightFeet = heightFeet;
+        this.heightInches = heightInches;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     public String getLastName() {
         return lastName;
     }
 
-    private double getHeight(){
-        return height;
-    }
-
-    public void setFirstName(String firstName){
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName){
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    private void setHeight(double height){
-        this.height=height;
+    public int getHeightFeet() {
+        return heightFeet;
     }
 
+    public void setHeightFeet(int heightFeet) {
+        this.heightFeet = heightFeet;
+    }
+
+    public int getHeightInches() {
+        return heightInches;
+    }
+
+    public void setHeightInches(int heightInches) {
+        this.heightInches = heightInches;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + firstName + " " + lastName + "\n" +
+                "They are " + heightFeet + "'" + heightInches + "\"\n";
+    }
 }
